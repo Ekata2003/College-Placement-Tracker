@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    
+    <style>
+  body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  /* Action Buttons */
+  button {
+    height: 42px;
+    width: 260px;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #5952b4, #44348e);
+    color: white;
+    font-size: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+  }
+
+  /* Students Grid */
+  #students-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+  }
+
+  /* Student Card */
+  .student-card,
+  #student-card {
+    background: white;
+    height: auto;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .student-card:hover,
+  #student-card:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Profile Image */
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #2563eb;
+  }
+
+  h4 {
+    margin: 8px 0;
+    color: #111827;
+  }
+
+  h5 {
+    margin: 6px 0;
+    color: #374151;
+  }
+
+  /* Edit & Delete Buttons */
+  #edit,
+  #delete {
+    height: 32px;
+    width: 110px;
+    margin: 8px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  #edit {
+    background: #22c55e;
+  }
+
+  #delete {
+    background: #ef4444;
+  }
+
+  #edit:hover {
+    box-shadow: 0 8px 15px rgba(34, 197, 94, 0.4);
+  }
+
+  #delete:hover {
+    box-shadow: 0 8px 15px rgba(239, 68, 68, 0.4);
+  }
+
+  /* Fade animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+        
+</head>
+
+<body>
+    <header id="header">
+        <h1>Placement Tracker</h1>
+        <input type="search">
+        <nav id="navlinks">
+            <a href="../index.html">Home</a>
+            <a href="./college.html">Colleges</a>
+            <a href="./students.html">Students</a>
+             <a href="./company.html">Companies</a>
+            <a href="./jobRole.html">Job Role</a>
+        </nav>
+    </header>
+
+        <button id="newStudent">Add New Student</button>
+        <button id="placedStudents">Placed Student</button>
+        <button id="notPlacedStudents">Not Placed Student</button>
+        
+    <section id="students-container">
+    </section>
+
+        <!-- <script src="../JS/index.js"></script> -->
+        <script src="../JS/api.js"></script>
+        <script src="../js/student.js"></script>
+
+</body>
+</html>

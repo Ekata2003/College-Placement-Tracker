@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#header{
+    height: 100px;
+    width: 100%;
+    border: 2px solid;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#header>h1{
+    color: white;
+}
+#header>input{
+    height: 40px;
+    width: 25%;
+    border-radius: 20px;
+
+}
+#navlinks{
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navlinks>a{
+    background-color: goldenrod;
+    border-radius: 10px; 
+    text-decoration: none;
+    color: white;
+    text-transform: initial;
+}
+
+#navlinks>a:hover{
+    background-color: blue;
+}

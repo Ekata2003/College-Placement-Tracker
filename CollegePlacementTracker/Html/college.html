@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    
+  <style>
+  body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  /* Top Action Buttons */
+  button {
+    height: 42px;
+    width: 260px;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    color: white;
+    font-size: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(22, 163, 74, 0.35);
+  }
+
+  /* Colleges Grid */
+  #college-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+  }
+
+  /* College Card */
+  .college-card,
+  #college-card {
+    background: white;
+    height: auto;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+
+  .college-card:hover,
+  #college-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .college-card h3,
+  #college-card h4 {
+    margin: 8px 0;
+    color: #111827;
+  }
+
+  .college-card p,
+  #college-card h5 {
+    margin: 6px 0;
+    color: #374151;
+    font-size: 14px;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+</head>
+
+<body>
+    <header id="header">
+        <h1>Placement Tracker</h1>
+        <input type="search">
+        <nav id="navlinks">
+            <a href="../index.html">Home</a>
+            <a href="./college.html">Colleges</a>
+            <a href="./students.html">Students</a>
+            <a href="./company.html">Companies</a>
+            <a href="./jobRole.html">Job Role</a>
+        </nav>
+    </header>
+
+        <button id="newCollege">Add New College</button>
+        <button id="removeCollege">Remove College</button>
+        
+        
+    <section id="college-container">
+    </section>
+
+        <script src="../JS/index.js"></script>
+        <script src="../JS/api.js"></script>
+        <script src="../JS/college.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Companies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../CSS/header.css">
+
+  <style>
+    body {
+      background: #f1f5f9;
+    }
+
+    .top-actions {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .top-actions button {
+      padding: 12px 25px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #companies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .company-card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .company-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .logo {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .it { background: #dbeafe; color: #1d4ed8; }
+    .product { background: #dcfce7; color: #166534; }
+  </style>
+</head>
+
+<body>
+
+<header id="header">
+  <h1>Placement Tracker</h1>
+  <input type="search"/>
+  <nav id="navlinks">
+    <a href="../index.html">Home</a>
+    <a href="./college.html">Colleges</a>
+    <a href="./students.html">Students</a>
+    <a href="./company.html">Companies</a>
+    <a href="./jobRole.html">Job Roles</a>
+  </nav>
+</header>
+
+<div class="top-actions">
+  <button id="addCompany">+ Add New Company</button>
+</div>
+
+<section id="companies"></section>
+
+<script src="../JS/api.js"></script>
+<script src="../JS/company.js"></script>
+
+</body>
+</html>

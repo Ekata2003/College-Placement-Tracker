@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   /* RESET */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* PAGE */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORM CARD */
+#addStud {
+    width: 800px;
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* FORM GRID */
+#studentform {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row; /* 🔥 IMPORTANT */
+    gap: 18px 22px;
+}
+
+/* HEADER MUST SPAN FULL WIDTH */
+#studentform > header {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#studentform > header h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+/* REMOVE <br> FROM LAYOUT */
+#studentform br {
+    display: none !important;
+}
+
+/* FORCE ALL INPUTS TO BE GRID ITEMS */
+#studentform input,
+#studentform select,
+#studentform button {
+    display: block;
+    width: 100%;
+}
+
+/* INPUT STYLING */
+#studentform input,
+#studentform select {
+    height: 44px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+/* FILE INPUT */
+#studentform input[type="file"] {
+    padding: 6px;
+}
+
+/* FOCUS */
+#studentform input:focus,
+#studentform select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* PLACEHOLDER */
+#studentform input::placeholder {
+    color: #9ca3af;
+}
+
+/* FULL WIDTH FIELDS */
+#tools,
+#placementStatus,
+#studentform button {
+    grid-column: 1 / -1;
+}
+
+/* BUTTON */
+#studentform button {
+    height: 46px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#studentform button:hover {
+    background: #1d4ed8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #addStud {
+        width: 95%;
+        padding: 25px;
+    }
+
+    #studentform {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+<div id="addStud">
+
+    <form id="studentform">
+        <header>
+            <h5>Placement Form</h5>
+        </header>
+        <br>
+        <br>
+      <input type="text" placeholder="Enter Student Name" id="studentName" />
+      <select id="studentGender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+      <!-- <br>
+      <br> -->
+      <input type="date" id="dob">
+      <input type="file" id="profileimg">
+      <br>
+      <br>
+      <input type="text" placeholder="Enter College Id" id="collegeId">
+      <input type="text" placeholder="Enter Departmenr" id="department">
+      <br><br>
+      <input type="text" placeholder="Enter Degree" id="degree">
+      <input type="number" placeholder="Enter Graduation Year" id="graduation">
+      <br><br>
+      <input type="number" placeholder="Enter CGPA" id="cgpa">
+      <input type="number" placeholder="Enter Backlogs" id="backlogs">
+      <br><br>
+      <input type="text" placeholder="Enter programing languages" id="programing">
+      <input type="text" placeholder="Enter Data Base" id="database">
+      <br>
+      <br>
+      <input type="text" placeholder="Enter tools" id="tools">
+      <select id="placementStatus">
+        <option>Placed</option>
+        <option>Not Placed</option>
+      </select>
+
+      <button>Submit</button>
+
+    </form>
+
+</div>
+</body>
+<!-- <script src="../Html/index.html"></script> -->
+<script src="../JS/addstudent.js"></script>
+
+</html>

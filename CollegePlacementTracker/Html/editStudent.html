@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <style>
+        input,select{
+        height: 30px;
+        width: 250px;
+        margin: 10px;
+      }
+        header{
+            background-color: rgb(229, 198, 229);
+            font-size: medium;
+            align-items:center;
+            justify-content: space-around;
+        }
+        #addStud{
+            /* margin: auto; */
+            border: 2px solid red;
+            align-content: center;
+            padding: 40px;
+           
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+        <h1>Placement Tracker</h1>
+        <input type="search">
+        <nav id="navlinks">
+            <a href="./index.html">Home</a>
+            <a href="">Colleges</a>
+            <a href="./students.html">Students</a>
+            <a href="">Companies</a>
+            <a href="./jobrole.js">Job Role</a>
+        </nav>
+    </header>
+
+    <div id="addStud">
+
+    <form id="studentform">
+        <header>
+            <h5>Placement Form</h5>
+        </header>
+
+      <input type="text" placeholder="Enter Student Name" id="studentName" />
+      <select id="studentGender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+      <br>
+      <br>
+      <input type="date" id="dob">
+      <input type="file" id="profileimg">
+      <br>
+      <br>
+      <input type="text" placeholder="Enter College Id" id="collegeId">
+      <input type="text" placeholder="Enter Departmenr" id="department">
+      <br><br>
+      <input type="text" placeholder="Enter Degree" id="degree">
+      <input type="number" placeholder="Enter Graduation Year" id="graduation">
+      <br><br>
+      <input type="number" placeholder="Enter CGPA" id="cgpa">
+      <input type="number" placeholder="Enter Backlogs" id="backlogs">
+      <br><br>
+      <input type="text" placeholder="Enter programing languages" id="programing">
+      <input type="text" placeholder="Enter Data Base" id="database">
+      <br>
+      <br>
+      <input type="text" placeholder="Enter tools" id="tools">
+      <select id="placementStatus">
+        <option>Placed</option>
+        <option>Not Placed</option>
+      </select>
+
+      <button>Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+<script src="../JS/editStudent.js"></script>
+</html>

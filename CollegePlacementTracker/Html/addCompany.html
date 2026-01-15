@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Company</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+
+  <style>
+    .form-box {
+      max-width: 400px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-box input, .form-box select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="form-box">
+  <h2>Add New Company</h2>
+
+  <input id="companyId" placeholder="Company ID (COM009)">
+  <input id="companyName" placeholder="Company Name">
+
+  <select id="industry">
+    <option>IT Services</option>
+    <option>Product Based</option>
+  </select>
+
+  <button onclick="addCompany()">Add Company</button>
+</div>
+
+<script src="../JS/api.js"></script>
+<script>
+async function addCompany() {
+  const body = {
+    company_id: companyId.value,
+    name: companyName.value,
+    industry: industry.value
+  };
+
+  await fetch("https://placementstracker-4.onrender.com/api/companies", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+
+  alert("Company Added");
+  window.location.href = "./company.html";
+}
+</script>
+
+</body>
+</html>
